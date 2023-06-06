@@ -5,11 +5,13 @@
     box-sizing: border-box;
 }
 body{
+    display: flex;
     width: 100%;
     height: auto;
     font-family: 'Roboto';
     font-size: 100px;
     margin: 0;
+    flex-direction: column;
 }
 
 #nav{
@@ -18,9 +20,59 @@ body{
     height: 120px;
     background-color: white;
 }
-#elemnav{
-    height: 115px;
+a{
+    text-decoration: none;
 }
+img{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    margin-left: 93%;
+    transition: transform .2s;
+    border-radius: 40px;
+    opacity: 0.4;
+}
+img:hover{
+    transform: scale(1.4);
+    opacity: 0.7;
+}
+#elemnav{
+    display: flex;
+}
+#lien{
+    align-items: center;
+    height: 115px;
+    display: flex;
+    font-size: 40px;
+    gap:50%;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#B{
+    color: #000000;
+    display: flex;
+    border:#000000 3px solid;
+    aspect-ratio:1/1;
+    border-radius: 300px;
+    width: 115px;
+    height: 115px;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    margin-top: 5px;
+    margin-left: 5px;
+    transition: transform 1s ease-in-out, background-color 1s ease-in-out,color 1s ease-in-out; /* Ajoute une transition fluide à la transformation */
+}
+
+#B:hover {
+  transform: rotate(360deg); /* Fait tourner le div de 360 degrés lorsqu'il est survolé */
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+/* #B:hover{
+    animation: linear infinite rotation 1s;
+} */
 .progress-bar-container {
     width: 100%;
     height: 5px;
@@ -38,27 +90,38 @@ img{
     width: 100px;
     position: fixed;
     margin-left: 93%;
+    margin-top: 37%;
     transition: transform .2s;
     border-radius: 40px;
-    opacity: 0.4;
-}
-:hover img{
-    transform: scale(1.4);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .elem{
     width: 100%;
-    height: 1000px;
-    background-color: aqua;
+    height: 969px;
 }
 #elem1{
+    position: flex;
+    background-image: 
+    url(https://media.discordapp.net/attachments/1068515510418944073/1080477847178723448/sketch-1677676374969.png?width=608&height=608),
+    url(https://media.discordapp.net/attachments/1068515510418944073/1080477846641856603/sketch-1677676361569.png?width=608&height=608),
+    url(https://media.discordapp.net/attachments/1068515510418944073/1080477846927048764/sketch-1677676368185.png?width=608&height=608);
+    background-repeat: repeat;
+    background-position: 50% 50%;
     padding-top: 120px;
+    background-color: black;
 }
 #elem2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(0, 89, 255);
+    
 }
 #elem3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(50, 0, 143);
 }
 
@@ -79,4 +142,63 @@ img{
 #textefin{
     width: 40%;
     padding-left: 10%;
+}
+
+
+.bttn-stretch {
+    margin-left: 10px;
+    border-color: transparent;
+    cursor:pointer;
+    overflow: hidden;
+    background: transparent;
+    -webkit-transition: all 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  .bttn-stretch:after,
+  .bttn-stretch:before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border: 2px rgb(255, 196, 0) solid;
+    border-radius: 50px;
+    content: '';
+    opacity: 1;
+    -webkit-transition: all 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  .bttn-stretch:after {top: 0;}
+  .bttn-stretch:before {bottom: 0;}
+
+  .bttn-stretch:hover,
+  .bttn-stretch:focus {
+    letter-spacing: 5px;
+    -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  .bttn-stretch:hover:after,
+  .bttn-stretch:focus:after {
+    -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .bttn-stretch:hover:before,
+  .bttn-stretch:focus:before {
+    -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+
+
+@keyframes rotation{
+    from{background-color:white;}
+    to{
+        background-color:black;
+        color: #ffffff;
+        transform: rotate(360deg);
+    }
 }
