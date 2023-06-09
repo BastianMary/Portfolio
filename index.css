@@ -17,7 +17,7 @@ body{
 #nav{
     position: fixed;
     width: 100%;
-    height: 120px;
+    height: 110px;
     background-color: white;
 }
 a{
@@ -38,15 +38,18 @@ img:hover{
 }
 #elemnav{
     display: flex;
+    padding-top: 5px;
+    padding-left: 5px;
+    align-items: center;
+    gap: 10%;
 }
 #lien{
     align-items: center;
-    height: 115px;
+    height: 100%;
+    width: 100%;
     display: flex;
     font-size: 40px;
-    gap:50%;
-    margin-left: 150px;
-    margin-right: 150px;
+    gap: 10%;
 }
 #B{
     color: #000000;
@@ -54,11 +57,11 @@ img:hover{
     border:#000000 3px solid;
     aspect-ratio:1/1;
     border-radius: 300px;
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.384);
     margin-top: 5px;
     margin-left: 5px;
     transition: transform 1s ease-in-out, background-color 1s ease-in-out,color 1s ease-in-out; /* Ajoute une transition fluide à la transformation */
@@ -68,6 +71,8 @@ img:hover{
   transform: rotate(360deg); /* Fait tourner le div de 360 degrés lorsqu'il est survolé */
   background-color: black;
   color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
+  animation: pulse 1s infinite ;
 }
 
 /* #B:hover{
@@ -82,7 +87,13 @@ img:hover{
     width: 0;
     height: 100%;
     background-color: #001aac;
-    transition: width 0.3s;
+    transition: width 1s;
+}
+#grad{
+    width: 100%;
+    height: 30px;
+    background: rgb(250,250,250);
+    background: linear-gradient(0deg, rgba(250,250,250,0) 0%, rgba(0,0,0,1) 1000%);
 }
 
 img{
@@ -100,6 +111,10 @@ img{
     width: 100%;
     height: 969px;
 }
+#elem0{
+    background-color: rgb(250, 250, 250);
+    padding-top: 110px;
+}
 #elem1{
     position: flex;
     background-image: 
@@ -108,7 +123,6 @@ img{
     url(https://media.discordapp.net/attachments/1068515510418944073/1080477846927048764/sketch-1677676368185.png?width=608&height=608);
     background-repeat: repeat;
     background-position: 50% 50%;
-    padding-top: 120px;
     background-color: black;
 }
 #elem2{
@@ -160,7 +174,7 @@ img{
     left: 0;
     width: 100%;
     height: 1px;
-    border: 2px rgb(255, 196, 0) solid;
+    border: 2px #001aac solid;
     border-radius: 50px;
     content: '';
     opacity: 1;
@@ -200,5 +214,10 @@ img{
         background-color:black;
         color: #ffffff;
         transform: rotate(360deg);
+    }
+}
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
     }
 }
