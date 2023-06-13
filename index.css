@@ -22,29 +22,18 @@ body{
 }
 a{
     text-decoration: none;
+    color: black;
 }
-img{
-    height: 100px;
-    width: 100px;
-    position: fixed;
-    margin-left: 93%;
-    transition: transform .2s;
-    border-radius: 40px;
-    opacity: 0.4;
-}
-img:hover{
-    transform: scale(1.4);
-    opacity: 0.7;
-}
+
 #elemnav{
     display: flex;
     padding-top: 5px;
     padding-left: 5px;
     align-items: center;
-    gap: 10%;
 }
 #lien{
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     display: flex;
@@ -87,7 +76,7 @@ img:hover{
 .progress-bar {
     width: 0;
     height: 100%;
-    background-color: #001aac;
+    background-color: #000000;
     transition: width 1s;
 }
 #grad{
@@ -104,8 +93,13 @@ img{
     margin-left: 93%;
     margin-top: 37%;
     transition: transform .2s;
-    border-radius: 40px;
-    opacity: 0.8;
+    border-radius: 100px;
+    border: #000000 1px solid;
+    opacity: 0.9;
+}
+img:hover{
+    transform: scale(1.4);
+    opacity: 1;
 }
 
 .elem{
@@ -116,31 +110,90 @@ img{
     background-color: rgb(250, 250, 250);
     padding-top: 110px;
 }
+/*############################################################################*/
 #elem1{
-    position: flex;
+    /* position: flex;
     background-image: 
     url(https://media.discordapp.net/attachments/1068515510418944073/1080477847178723448/sketch-1677676374969.png?width=608&height=608),
     url(https://media.discordapp.net/attachments/1068515510418944073/1080477846641856603/sketch-1677676361569.png?width=608&height=608),
     url(https://media.discordapp.net/attachments/1068515510418944073/1080477846927048764/sketch-1677676368185.png?width=608&height=608);
     background-repeat: repeat;
-    background-position: 50% 50%;
-    background-color: black;
-}
-#elem2{
+    background-position: 50% 50%; */
     display: flex;
     align-items: center;
+    background-color: black;
+}
+#videoatlas{
+    width: 45%;
+    aspect-ratio: 1.735/1;
+    background-image:url(images/atlas.gif);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10000px;
+    border: white 1px solid;
+}
+#noir1{
+    display: flex;
+    background-color: black;
+    height: 8%;
+    width: 100%;
+    align-self: flex-start;
+}
+#atlascontenu{ /*rgb(255, 196, 0) */
+    display: flex;
+    width: 100%;
+    height: 85%;
+    backdrop-filter:blur(0px);
+    border: white 1px solid;
+    transition: backdrop-filter 1s ease-in-out;
+    border-radius: 1600px;
     justify-content: center;
-    background-color: rgb(0, 89, 255);
-    
+    align-items: center;
+}
+#atlascontenu:hover{
+    backdrop-filter:blur(5px);
+}
+#atlaslien{
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+}
+#consu{
+    color: #ffffff;
+}
+#atlaslien:hover{
+    opacity: 1;
+}
+#noir2{
+    display: flex;
+    background-color: black;
+    height: 7%;
+    width: 100%;
+    align-self: flex-end;
+}
+#elem2{
+    background-color: rgb(255, 115, 0);
+    padding-top: 110px;
 }
 #elem3{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(0, 89, 255);
+}
+#elem4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(50, 0, 143);
 }
-
-
 #fin{
     display: flex;
     width: 100%;
@@ -154,7 +207,10 @@ img{
     padding-left: 10%;
 }
 
+
+
 .bttn-stretch {
+    position: static;
     margin-left: 10px;
     border-color: transparent;
     cursor:pointer;
